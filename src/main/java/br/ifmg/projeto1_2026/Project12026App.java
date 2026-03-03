@@ -1,13 +1,13 @@
-package br.ifmg.produto1_2026;
+package br.ifmg.projeto1_2026;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Produto12026Application {
+public class Project12026App {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Produto12026Application.class, args);
+		SpringApplication.run(Project12026App.class, args);
 	}
 
 }
