@@ -1,11 +1,18 @@
 package br.ifmg.projeto1_2026.service;
 
+import br.ifmg.projeto1_2026.dto.CategoriaDTO;
 import br.ifmg.projeto1_2026.entity.Categoria;
 import br.ifmg.projeto1_2026.repository.CategoriaRepository;
+import br.ifmg.projeto1_2026.service.exception.ErroNoBancoDeDados;
+import br.ifmg.projeto1_2026.service.exception.RegistroNaoEncontrado;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CategoriaService {
@@ -13,7 +20,51 @@ public class CategoriaService {
     @Autowired
     private CategoriaRepository categoriaRepository;
 
-    public List<Categoria> findAll() {
-        return categoriaRepository.findAll();
+    @Transactional(readOnly = true)
+
+    public List<CategoriaDTO> findAll(){
+
+        //lista com os dados do bd
+        List<Categoria>  categorias = categoriaRepository.findAll();
+
+        //lista com os dados convertidos em DTO
+        List<CategoriaDTO> categoriasDTO = new ArrayList<CategoriaDTO>();
+
+        for(Categoria categoria: categorias){
+            categoriasDTO.add(new CategoriaDTO(categoria));
+        }
+        return categoriasDTO;
+    }
+
+    public CategoriaDTO findById(Long id) {
+        //buscamos no bd a categoria. O resultado é um objeto do tipo Optional
+        Optional<Categoria> opt = categoriaRepository.findById(id);
+
+        //buscamos a categoria dentro do objeto Optional
+        Categoria categoria = opt.orElseThrow(()->new RegistroNaoEncontrado("Categoria não encontrada"));
+
+        //convertemos a entidade de DTO
+        return new CategoriaDTO(categoria);
+    }
+
+    public CategoriaDTO insert(CategoriaDTO dto){
+
+        Categoria entity = new Categoria();
+        entity.setNome(dto.getNome());
+        CategoriaDTO nova = categoriaRepository.save(entity);
+        return new CategoriaDTO(entity);
+    }
+
+    @Transactional
+    public CategoriaDTO delete(Long id){
+        if(!categoriaRepository.existsById(id)){
+            throw new RegistroNaoEncontrado("Categoria não encontrada ao ser excluída.");
+        }
+        try{
+            categoriaRepository.deleteById(id);
+        }
+        catch (DataIntegrityViolationException e){
+            throw new ErroNoBancoDeDados(e.getMessage());
+        }
     }
 }
