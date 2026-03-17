@@ -56,7 +56,7 @@ public class CategoriaService {
     }
 
     @Transactional
-    public CategoriaDTO delete(Long id){
+    public void delete(Long id){
         if(!categoriaRepository.existsById(id)){
             throw new RegistroNaoEncontrado("Categoria não encontrada ao ser excluída.");
         }
@@ -66,5 +66,18 @@ public class CategoriaService {
         catch (DataIntegrityViolationException e){
             throw new ErroNoBancoDeDados(e.getMessage());
         }
+    }
+
+    public CategoriaDTO update(Long id, CategoriaDTO dto){
+        if(!categoriaRepository.existsById(id)){
+            throw new RegistroNaoEncontrado("Categoria não encontrada.");
+        }
+
+        Categoria entity = categoriaRepository.getReferenceById(id);
+
+        entity.setNome(dto.getNome());
+        entity = categoriaRepository.save(entity);
+        return new CategoriaDTO(entity);
+
     }
 }

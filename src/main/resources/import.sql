@@ -1,4 +1,4 @@
-insert into tb_categoria (nome) values ('Livros');
-insert into tb_categoria (nome) values ('Roupas');
-insert into tb_categoria (nome) values ('Notebook');
-insert into tb_categoria (nome) values ('Panelas');
+insert into tb_categoria (nome, criado_em) values ('Livros', NOW());
+insert into tb_categoria (nome, criado_em) values ('Roupas', NOW());
+insert into tb_categoria (nome, criado_em) values ('Notebook', NOW());
+insert into tb_categoria (nome, criado_em) values ('Panelas', NOW());

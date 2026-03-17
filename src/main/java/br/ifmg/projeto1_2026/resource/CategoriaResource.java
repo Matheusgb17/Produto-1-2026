@@ -42,13 +42,33 @@ public class CategoriaResource {
         return ResponseEntity.created(location).body(retorno);
     }
 
+    public ResponseEntity<List<CategoriaDTO>> categorias(
+            @RequestParam(value = "page", defaultValue = "0") Integer page,
+            @RequestParam(value = "linesperPage", defaultValue = "10") Integer linesperPage,
+            @RequestParam(value = "direction", defaultValue = "ASC") String direction,
+            @RequestParam(value = "sort", defaultValue = "id") String sort
+    ){
+
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<CategoriaDTO> categoria(@PathVariable Long id){
         CategoriaDTO dto = categoriaService.findById(id);
 
-
-
         return ResponseEntity.ok().body(dto);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<CategoriaDTO> delete(@PathVariable Long id){
+        categoriaService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<CategoriaDTO> update(@PathVariable Long id, @RequestBody CategoriaDTO dto){
+        CategoriaDTO ret = categoriaService.update(id, dto);
+
+        return ResponseEntity.ok().body(ret);
     }
 
 }
