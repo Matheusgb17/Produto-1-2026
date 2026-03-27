@@ -1,4 +1,4 @@
-package br.ifmg.projeto1_2026.resource.exepction;
+package br.ifmg.projeto1_2026.resources.exepction;
 
 import java.time.Instant;
 

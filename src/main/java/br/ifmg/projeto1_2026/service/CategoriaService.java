@@ -6,10 +6,13 @@ import br.ifmg.projeto1_2026.repository.CategoriaRepository;
 import br.ifmg.projeto1_2026.service.exception.ErroNoBancoDeDados;
 import br.ifmg.projeto1_2026.service.exception.RegistroNaoEncontrado;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import org.springframework.data.domain.Pageable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -20,22 +23,14 @@ public class CategoriaService {
     @Autowired
     private CategoriaRepository categoriaRepository;
 
-    @Transactional(readOnly = true)
+    public Page<CategoriaDTO> findAll(Pageable pageable){
+        Page<Categoria> categorias = categoriaRepository.findAll(pageable);
 
-    public List<CategoriaDTO> findAll(){
-
-        //lista com os dados do bd
-        List<Categoria>  categorias = categoriaRepository.findAll();
-
-        //lista com os dados convertidos em DTO
-        List<CategoriaDTO> categoriasDTO = new ArrayList<CategoriaDTO>();
-
-        for(Categoria categoria: categorias){
-            categoriasDTO.add(new CategoriaDTO(categoria));
-        }
-        return categoriasDTO;
+        return categorias.map(CategoriaDTO::new);
     }
 
+
+    @Transactional(readOnly = true)
     public CategoriaDTO findById(Long id) {
         //buscamos no bd a categoria. O resultado é um objeto do tipo Optional
         Optional<Categoria> opt = categoriaRepository.findById(id);
@@ -51,8 +46,8 @@ public class CategoriaService {
 
         Categoria entity = new Categoria();
         entity.setNome(dto.getNome());
-        CategoriaDTO nova = categoriaRepository.save(entity);
-        return new CategoriaDTO(entity);
+        Categoria nova = categoriaRepository.save(entity);
+        return new CategoriaDTO(nova);
     }
 
     @Transactional

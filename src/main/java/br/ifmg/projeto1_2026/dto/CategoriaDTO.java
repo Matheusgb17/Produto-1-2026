@@ -4,6 +4,21 @@ import br.ifmg.projeto1_2026.entity.Categoria;
 
 public class CategoriaDTO {
 
+    private Long id;
+    private String nome;
+
+    public CategoriaDTO() {}
+
+    public CategoriaDTO(String nome, Long id) {
+        this.nome = nome;
+        this.id = id;
+    }
+
+    public CategoriaDTO(Categoria categoria) {
+        this.id = categoria.getId();
+        this.nome = categoria.getNome();
+    }
+
     public String getNome() {
         return nome;
     }
@@ -20,18 +35,13 @@ public class CategoriaDTO {
         this.id = id;
     }
 
-    private String nome;
-
-    public CategoriaDTO(String nome, Long id) {
-        this.nome = nome;
-        this.id = id;
+    @Override
+    public String toString() {
+        return "CategoriaDTO{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                '}';
     }
 
-    public CategoriaDTO(Categoria categoria) {
-        this.id = categoria.getId();
-        this.nome = categoria.getNome();
-    }
-
-    private Long id;
 
 }
