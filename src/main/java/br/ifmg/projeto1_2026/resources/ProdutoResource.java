@@ -4,12 +4,13 @@ import br.ifmg.projeto1_2026.dto.ProdutoDTO;
 import org.springframework.data.domain.Page;
 import br.ifmg.projeto1_2026.service.ProdutoService;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import java.awt.print.Pageable;
+import org.springframework.data.domain.Pageable;
 import java.net.URI;
 
 @RestController

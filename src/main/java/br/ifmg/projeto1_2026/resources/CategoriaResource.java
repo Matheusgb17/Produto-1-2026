@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import java.awt.print.Pageable;
+import org.springframework.data.domain.Pageable;
 import java.net.URI;
 
 @RestController
