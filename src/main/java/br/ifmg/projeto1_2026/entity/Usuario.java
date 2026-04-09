@@ -1,11 +1,11 @@
 package br.ifmg.projeto1_2026.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.Instant;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
 
 public class Usuario {
 
@@ -22,6 +22,8 @@ public class Usuario {
 
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant atualizadoEm;
+
+    private Set<Perfil> perfis = new HashSet<Perfil>();
 
     public Usuario(Long id, String nome, String telefone, String email, String senha, Instant criadoEm, Instant atualizadoEm) {
         this.id = id;
@@ -79,7 +81,37 @@ public class Usuario {
         this.senha = senha;
     }
 
+    public Set<Perfil> getPerfil() {
+        return perfis;
+    }
+
+    public void setPerfil(Set<Perfil> perfis) {
+        this.perfis = perfis;
+    }
+
     public Usuario() {
+    }
+
+    @PrePersist
+    public void prePersist(){
+        this.criadoEm = Instant.now();
+    }
+
+    @PreUpdate
+    public void preUpdate(){
+        this.atualizadoEm = Instant.now();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Usuario usuario = (Usuario) o;
+        return Objects.equals(id, usuario.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
     }
 
     @Override
@@ -90,6 +122,8 @@ public class Usuario {
                 ", telefone='" + telefone + '\'' +
                 ", email='" + email + '\'' +
                 ", senha='" + senha + '\'' +
+                ", criadoEm=" + criadoEm +
+                ", atualizadoEm=" + atualizadoEm +
                 '}';
     }
 }

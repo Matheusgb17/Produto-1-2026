@@ -13,7 +13,7 @@ public class UsuarioDTO {
     private String email;
     private String senha;
 
-    private List<PerfilDTO> perfis = new ArrayList<PerfilDTO>();
+    private List<PerfilDTO> perfil = new ArrayList<PerfilDTO>();
 
     public UsuarioDTO(Long id, String nome, String telefone, String email, String senha) {
         this.id = id;
@@ -29,7 +29,7 @@ public class UsuarioDTO {
         this.telefone = usuario.getTelefone();
         this.email = usuario.getEmail();
         this.senha = usuario.getSenha();
-        usuario.getPerfis().forEach(perf->this.perfis.add(new PerfilDTO(perf)));
+        usuario.getPerfil().forEach(perf->this.perfis.add(new PerfilDTO(perf)));
     }
 
     public Long getId() {
@@ -70,6 +70,14 @@ public class UsuarioDTO {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public List<PerfilDTO> getPerfil() {
+        return perfil;
+    }
+
+    public void setPerfil(List<PerfilDTO> perfil) {
+        this.perfil = perfil;
     }
 
     @Override
