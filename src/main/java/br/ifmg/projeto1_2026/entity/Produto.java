@@ -6,6 +6,8 @@ import java.time.Instant;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
+@Table(name = "tb_produto")
 public class Produto {
 
     @Id

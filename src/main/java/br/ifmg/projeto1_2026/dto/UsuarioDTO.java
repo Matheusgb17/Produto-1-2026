@@ -29,7 +29,7 @@ public class UsuarioDTO {
         this.telefone = usuario.getTelefone();
         this.email = usuario.getEmail();
         this.senha = usuario.getSenha();
-        usuario.getPerfil().forEach(perf->this.perfis.add(new PerfilDTO(perf)));
+        usuario.getPerfil().forEach(perf->this.perfil.add(new PerfilDTO(perf)));
     }
 
     public Long getId() {

@@ -16,14 +16,13 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http:/{{host}}/categoria",
+              "raw": "http://{{host}}/categorias",
+              "protocol": "http",
               "host": [
-                "http"
+                "{{host}}"
               ],
-              "port": "",
               "path": [
-                "{{host}}",
-                "categoria"
+                "categorias"
               ]
             }
           },
@@ -35,15 +34,14 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http:/{{host}}/categoria/1",
+              "raw": "http://{{host}}/categorias/5",
+              "protocol": "http",
               "host": [
-                "http"
+                "{{host}}"
               ],
-              "port": "",
               "path": [
-                "{{host}}",
-                "categoria",
-                "1"
+                "categorias",
+                "5"
               ]
             }
           },

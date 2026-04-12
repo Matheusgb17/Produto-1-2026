@@ -1,13 +1,12 @@
 package br.ifmg.projeto1_2026.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.Instant;
 import java.util.Objects;
 
+@Entity
+@Table(name = "tb_perfil")
 public class Perfil {
 
     @Id
