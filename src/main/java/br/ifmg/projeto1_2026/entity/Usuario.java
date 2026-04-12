@@ -25,6 +25,13 @@ public class Usuario {
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant atualizadoEm;
 
+    @ManyToMany
+    @JoinTable(
+            name = "tb_usuario_perfil",
+            joinColumns = @JoinColumn(name = "id_usuario"),
+            inverseJoinColumns = @JoinColumn(name = "id_perfil")
+    )
+
     @ElementCollection
     private Set<Perfil> perfis = new HashSet<Perfil>();
 
