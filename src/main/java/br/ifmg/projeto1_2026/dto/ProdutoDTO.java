@@ -1,14 +1,25 @@
 package br.ifmg.projeto1_2026.dto;
 
 import br.ifmg.projeto1_2026.entity.Produto;
+import io.swagger.v3.oas.annotations.media.Schema;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProdutoDTO {
 
+    @Schema(description = "Identificador unico do produto")
     private Long id;
+    @Schema(description = "Nome do produto")
     private String nome;
+    @Schema(description = "Descrição detalhada do produto")
     private String descricao;
+    @Schema(description = "Valor em reais do produto")
     private Double preco;
+    @Schema(description = "Endereço eletrônico de imagens")
     private String imgUrl;
+
+    private List<CategoriaDTO> categorias = new ArrayList<CategoriaDTO>();
 
     public ProdutoDTO() {
     }

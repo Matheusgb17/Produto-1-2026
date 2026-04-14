@@ -1,6 +1,9 @@
 package br.ifmg.projeto1_2026.resources;
 
 import br.ifmg.projeto1_2026.dto.ProdutoDTO;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.data.domain.Page;
 import br.ifmg.projeto1_2026.service.ProdutoService;
 
@@ -16,10 +19,12 @@ import java.net.URI;
 @RestController
 @RequestMapping("/produto")
 
+@Tag(name="Produtos",description = "Essa API é responsável por gerenciar produtos na plataforma.")
 public class ProdutoResource {
 
     @Autowired
     private ProdutoService produtoService;
+
 
     @GetMapping
     public ResponseEntity<Page<ProdutoDTO>> produtos(Pageable pageable){
@@ -28,12 +33,29 @@ public class ProdutoResource {
     }
 
     @GetMapping("/{id}")
+    @PostMapping(produces = "application/json")
+    @Operation(
+            summary = "Endpoint para buscar um produto",
+            description = "A plataforma precisa disponibilizar uma listagem de produtos",
+            responses = {
+                    @ApiResponse(description = "Retorna a informação pesquisada por ID!", responseCode = "200"),
+                    @ApiResponse(description = "Não encontrado no sistema", responseCode = "404")
+            }
+    )
     public ResponseEntity<ProdutoDTO> produto(@PathVariable Long id){
         ProdutoDTO dto = produtoService.findById(id);
         return ResponseEntity.ok().body(dto);
     }
 
-    @PostMapping
+    @PostMapping(produces = "application/json")
+    @Operation(
+            summary = "Endpoint para inserir um produto",
+            description = "A plataforma precisa disponibilizar um cadastro de produtos",
+            responses = {
+                    @ApiResponse(description = "Lista retornada com sucesso!", responseCode = "200"),
+                    @ApiResponse(description = "Erro interno", responseCode = "500")
+            }
+    )
     public ResponseEntity<ProdutoDTO> insert(@RequestBody ProdutoDTO dto){
         ProdutoDTO retorno = produtoService.insert(dto);
 
