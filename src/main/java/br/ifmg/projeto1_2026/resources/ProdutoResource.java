@@ -7,7 +7,6 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.data.domain.Page;
 import br.ifmg.projeto1_2026.service.ProdutoService;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,28 +17,32 @@ import java.net.URI;
 
 @RestController
 @RequestMapping("/produto")
-
-@Tag(name="Produtos",description = "Essa API é responsável por gerenciar produtos na plataforma.")
+@Tag(name="Produtos", description = "Essa API é responsável por gerenciar produtos na plataforma.")
 public class ProdutoResource {
 
     @Autowired
     private ProdutoService produtoService;
 
-
-    @GetMapping
+    @GetMapping(produces = "application/json")
+    @Operation(
+            summary = "Endpoint para listar produtos",
+            description = "Retorna uma página com a listagem de todos os produtos cadastrados no sistema.",
+            responses = {
+                    @ApiResponse(description = "Listagem retornada com sucesso!", responseCode = "200")
+            }
+    )
     public ResponseEntity<Page<ProdutoDTO>> produtos(Pageable pageable){
         Page<ProdutoDTO> produtos = produtoService.findAll(pageable);
         return ResponseEntity.ok().body(produtos);
     }
 
-    @GetMapping("/{id}")
-    @PostMapping(produces = "application/json")
+    @GetMapping(value = "/{id}", produces = "application/json")
     @Operation(
-            summary = "Endpoint para buscar um produto",
-            description = "A plataforma precisa disponibilizar uma listagem de produtos",
+            summary = "Endpoint para buscar um produto por ID",
+            description = "Busca os detalhes de um produto específico através do seu identificador único.",
             responses = {
-                    @ApiResponse(description = "Retorna a informação pesquisada por ID!", responseCode = "200"),
-                    @ApiResponse(description = "Não encontrado no sistema", responseCode = "404")
+                    @ApiResponse(description = "Produto encontrado e retornado com sucesso!", responseCode = "200"),
+                    @ApiResponse(description = "Produto não encontrado no sistema", responseCode = "404")
             }
     )
     public ResponseEntity<ProdutoDTO> produto(@PathVariable Long id){
@@ -47,13 +50,14 @@ public class ProdutoResource {
         return ResponseEntity.ok().body(dto);
     }
 
-    @PostMapping(produces = "application/json")
+    @PostMapping(produces = "application/json", consumes = "application/json")
     @Operation(
             summary = "Endpoint para inserir um produto",
-            description = "A plataforma precisa disponibilizar um cadastro de produtos",
+            description = "Recebe os dados no corpo da requisição e cadastra um novo produto na plataforma.",
             responses = {
-                    @ApiResponse(description = "Lista retornada com sucesso!", responseCode = "200"),
-                    @ApiResponse(description = "Erro interno", responseCode = "500")
+                    @ApiResponse(description = "Produto criado com sucesso!", responseCode = "201"),
+                    @ApiResponse(description = "Erro de validação dos dados", responseCode = "400"),
+                    @ApiResponse(description = "Erro interno do servidor", responseCode = "500")
             }
     )
     public ResponseEntity<ProdutoDTO> insert(@RequestBody ProdutoDTO dto){
@@ -69,16 +73,32 @@ public class ProdutoResource {
     }
 
     @DeleteMapping("/{id}")
+    @Operation(
+            summary = "Endpoint para deletar um produto",
+            description = "Remove um produto específico do banco de dados utilizando o seu ID.",
+            responses = {
+                    @ApiResponse(description = "Produto deletado com sucesso!", responseCode = "204"),
+                    @ApiResponse(description = "Produto não encontrado para deleção", responseCode = "404")
+            }
+    )
     public ResponseEntity<Void> delete(@PathVariable Long id){
         produtoService.delete(id);
         return ResponseEntity.noContent().build();
     }
 
-    @PutMapping("/{id}")
+    @PutMapping(value="/{id}", produces = "application/json", consumes = "application/json")
+    @Operation(
+            summary = "Endpoint para atualizar um produto",
+            description = "Atualiza as informações de um produto já existente com base no ID fornecido.",
+            responses = {
+                    @ApiResponse(description = "Produto atualizado com sucesso!", responseCode = "200"),
+                    @ApiResponse(description = "Requisição mal formatada ou dados inválidos", responseCode = "400"),
+                    @ApiResponse(description = "Produto não encontrado no sistema", responseCode = "404")
+            }
+    )
     public ResponseEntity<ProdutoDTO> update(@PathVariable Long id, @RequestBody ProdutoDTO dto){
         ProdutoDTO ret = produtoService.update(id, dto);
         return ResponseEntity.ok().body(ret);
     }
-
 
 }

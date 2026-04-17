@@ -2,11 +2,12 @@ package br.ifmg.projeto1_2026.dto;
 
 import br.ifmg.projeto1_2026.entity.Produto;
 import io.swagger.v3.oas.annotations.media.Schema;
+import org.springframework.hateoas.RepresentationModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProdutoDTO {
+public class ProdutoDTO extends RepresentationModel<ProdutoDTO> {
 
     @Schema(description = "Identificador unico do produto")
     private Long id;
