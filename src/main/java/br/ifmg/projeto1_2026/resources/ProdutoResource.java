@@ -4,6 +4,8 @@ import br.ifmg.projeto1_2026.dto.ProdutoDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import br.ifmg.projeto1_2026.service.ProdutoService;
 
@@ -20,6 +22,8 @@ import java.net.URI;
 @Tag(name="Produtos", description = "Essa API é responsável por gerenciar produtos na plataforma.")
 public class ProdutoResource {
 
+    private static final Logger logger = LoggerFactory.getLogger(ProdutoResource.class);
+
     @Autowired
     private ProdutoService produtoService;
 
@@ -33,6 +37,11 @@ public class ProdutoResource {
     )
     public ResponseEntity<Page<ProdutoDTO>> produtos(Pageable pageable){
         Page<ProdutoDTO> produtos = produtoService.findAll(pageable);
+
+        logger.info("Consltando a lista de produtos");
+        logger.warn("Consltando a lista de produtos");
+        logger.error("Consltando a {} de produtos", "lista");
+
         return ResponseEntity.ok().body(produtos);
     }
 

@@ -1,0 +1,13 @@
+2026-04-24T11:37:11.855-03:00  INFO 4652 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : Starting Project12026App using Java 25.0.2 with PID 4652 (D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026\target\classes started by Matheus in D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026)
+2026-04-24T11:37:11.859-03:00  INFO 4652 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : The following 1 profile is active: "test"
+2026-04-24T11:37:13.750-03:00  INFO 4652 --- [projeto1-2026] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-24T11:37:13.751-03:00  INFO 4652 --- [projeto1-2026] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-04-24T11:37:13.836-03:00  INFO 4652 --- [projeto1-2026] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-24T11:37:13.982-03:00  INFO 4652 --- [projeto1-2026] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-24T11:37:14.203-03:00  INFO 4652 --- [projeto1-2026] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-04-24T11:37:14.207-03:00  INFO 4652 --- [projeto1-2026] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-24T11:37:16.652-03:00  INFO 4652 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : Started Project12026App in 5.659 seconds (process running for 6.697)
+2026-04-24T11:37:16.654-03:00  WARN 4652 --- [projeto1-2026] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-24T11:37:16.655-03:00  WARN 4652 --- [projeto1-2026] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-24T11:38:01.843-03:00  INFO 4652 --- [projeto1-2026] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-24T11:38:01.845-03:00  INFO 4652 --- [projeto1-2026] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
