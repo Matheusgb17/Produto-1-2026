@@ -1,13 +1,222 @@
-2026-04-24T11:37:11.855-03:00  INFO 4652 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : Starting Project12026App using Java 25.0.2 with PID 4652 (D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026\target\classes started by Matheus in D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026)
-2026-04-24T11:37:11.859-03:00  INFO 4652 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : The following 1 profile is active: "test"
-2026-04-24T11:37:13.750-03:00  INFO 4652 --- [projeto1-2026] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-24T11:37:13.751-03:00  INFO 4652 --- [projeto1-2026] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.52]
-2026-04-24T11:37:13.836-03:00  INFO 4652 --- [projeto1-2026] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-04-24T11:37:13.982-03:00  INFO 4652 --- [projeto1-2026] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-04-24T11:37:14.203-03:00  INFO 4652 --- [projeto1-2026] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2026-04-24T11:37:14.207-03:00  INFO 4652 --- [projeto1-2026] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-04-24T11:37:16.652-03:00  INFO 4652 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : Started Project12026App in 5.659 seconds (process running for 6.697)
-2026-04-24T11:37:16.654-03:00  WARN 4652 --- [projeto1-2026] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-04-24T11:37:16.655-03:00  WARN 4652 --- [projeto1-2026] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-04-24T11:38:01.843-03:00  INFO 4652 --- [projeto1-2026] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-04-24T11:38:01.845-03:00  INFO 4652 --- [projeto1-2026] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-28T10:28:47.746-03:00  INFO 1484 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : Starting Project12026App using Java 25.0.2 with PID 1484 (D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026\target\classes started by Matheus in D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026)
+2026-04-28T10:28:47.752-03:00  INFO 1484 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : The following 1 profile is active: "test"
+2026-04-28T10:28:49.951-03:00  INFO 1484 --- [projeto1-2026] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-28T10:28:49.951-03:00  INFO 1484 --- [projeto1-2026] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-04-28T10:28:50.043-03:00  INFO 1484 --- [projeto1-2026] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-28T10:28:50.234-03:00  INFO 1484 --- [projeto1-2026] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-28T10:28:50.500-03:00  INFO 1484 --- [projeto1-2026] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-04-28T10:28:50.502-03:00  INFO 1484 --- [projeto1-2026] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-28T10:28:53.780-03:00  INFO 1484 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : Started Project12026App in 6.664 seconds (process running for 13.611)
+2026-04-28T10:28:53.782-03:00  WARN 1484 --- [projeto1-2026] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-28T10:28:53.784-03:00  WARN 1484 --- [projeto1-2026] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-28T10:34:51.937-03:00  INFO 1484 --- [projeto1-2026] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-28T10:34:51.940-03:00  INFO 1484 --- [projeto1-2026] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-28T10:34:58.784-03:00  INFO 7696 --- [main] br.ifmg.projeto1_2026.Project12026App    : Starting Project12026App using Java 25.0.2 with PID 7696 (D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026\target\classes started by Matheus in D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026)
+2026-04-28T10:34:58.787-03:00  INFO 7696 --- [main] br.ifmg.projeto1_2026.Project12026App    : No active profile set, falling back to 1 default profile: "default"
+2026-04-28T10:35:01.734-03:00  INFO 7696 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-28T10:35:01.735-03:00  INFO 7696 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-04-28T10:35:01.820-03:00  INFO 7696 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-28T10:35:01.952-03:00  INFO 7696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-28T10:35:02.170-03:00  INFO 7696 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:b7a8baff-ee50-442a-bb0a-421fa6c62ad1 user=SA
+2026-04-28T10:35:02.173-03:00  INFO 7696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-28T10:35:03.799-03:00  WARN 7696 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'produtosConfig': Injection of autowired dependencies failed
+2026-04-28T10:35:03.808-03:00  INFO 7696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-28T10:35:03.810-03:00  INFO 7696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-28T10:35:03.812-03:00  INFO 7696 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-28T10:35:03.847-03:00 ERROR 7696 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'produtosConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515) ~[spring-beans-6.2.16.jar:6.2.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.16.jar:6.2.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.16.jar:6.2.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.16.jar:6.2.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.16.jar:6.2.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.16.jar:6.2.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.16.jar:6.2.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.16.jar:6.2.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228) ~[spring-beans-6.2.16.jar:6.2.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194) ~[spring-beans-6.2.16.jar:6.2.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) ~[spring-beans-6.2.16.jar:6.2.16]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:991) ~[spring-context-6.2.16.jar:6.2.16]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) ~[spring-context-6.2.16.jar:6.2.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.11.jar:3.5.11]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.11.jar:3.5.11]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.11.jar:3.5.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.11.jar:3.5.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.11.jar:3.5.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.11.jar:3.5.11]
+	at br.ifmg.projeto1_2026.Project12026App.main(Project12026App.java:10) ~[classes/:na]
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'notificador.email.host' in value "${notificador.email.host}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81) ~[spring-core-6.2.16.jar:6.2.16]
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:298) ~[spring-core-6.2.16.jar:6.2.16]
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:131) ~[spring-core-6.2.16.jar:6.2.16]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114) ~[spring-core-6.2.16.jar:6.2.16]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:293) ~[spring-core-6.2.16.jar:6.2.16]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:264) ~[spring-core-6.2.16.jar:6.2.16]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:186) ~[spring-context-6.2.16.jar:6.2.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:970) ~[spring-beans-6.2.16.jar:6.2.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1675) ~[spring-beans-6.2.16.jar:6.2.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653) ~[spring-beans-6.2.16.jar:6.2.16]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.2.16.jar:6.2.16]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.2.16.jar:6.2.16]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.16.jar:6.2.16]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.16.jar:6.2.16]
+	... 19 common frames omitted
+
+2026-04-28T10:35:34.658-03:00  INFO 3572 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : Starting Project12026App using Java 25.0.2 with PID 3572 (D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026\target\classes started by Matheus in D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026)
+2026-04-28T10:35:34.660-03:00  INFO 3572 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : The following 1 profile is active: "test"
+2026-04-28T10:35:36.375-03:00  INFO 3572 --- [projeto1-2026] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-28T10:35:36.375-03:00  INFO 3572 --- [projeto1-2026] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-04-28T10:35:36.456-03:00  INFO 3572 --- [projeto1-2026] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-28T10:35:36.622-03:00  INFO 3572 --- [projeto1-2026] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-28T10:35:36.820-03:00  INFO 3572 --- [projeto1-2026] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-04-28T10:35:36.823-03:00  INFO 3572 --- [projeto1-2026] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-28T10:35:39.498-03:00  INFO 3572 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : Started Project12026App in 5.496 seconds (process running for 6.19)
+2026-04-28T10:35:39.501-03:00  WARN 3572 --- [projeto1-2026] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-28T10:35:39.501-03:00  WARN 3572 --- [projeto1-2026] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-28T10:35:48.636-03:00  INFO 3572 --- [projeto1-2026] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-28T10:37:03.857-03:00  INFO 3572 --- [projeto1-2026] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-28T10:37:03.859-03:00  INFO 3572 --- [projeto1-2026] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-28T10:37:09.251-03:00  INFO 13924 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : Starting Project12026App using Java 25.0.2 with PID 13924 (D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026\target\classes started by Matheus in D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026)
+2026-04-28T10:37:09.254-03:00  INFO 13924 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : The following 1 profile is active: "test"
+2026-04-28T10:37:11.664-03:00  INFO 13924 --- [projeto1-2026] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-28T10:37:11.665-03:00  INFO 13924 --- [projeto1-2026] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-04-28T10:37:11.807-03:00  INFO 13924 --- [projeto1-2026] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-28T10:37:12.168-03:00  INFO 13924 --- [projeto1-2026] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-28T10:37:12.719-03:00  INFO 13924 --- [projeto1-2026] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-04-28T10:37:12.725-03:00  INFO 13924 --- [projeto1-2026] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-28T10:37:17.962-03:00  INFO 13924 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : Started Project12026App in 9.471 seconds (process running for 10.123)
+2026-04-28T10:37:17.967-03:00  WARN 13924 --- [projeto1-2026] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-28T10:37:17.967-03:00  WARN 13924 --- [projeto1-2026] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-28T10:45:49.912-03:00  INFO 13924 --- [projeto1-2026] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-28T10:45:49.914-03:00  INFO 13924 --- [projeto1-2026] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-28T11:25:26.061-03:00  INFO 4952 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : Starting Project12026App using Java 25.0.2 with PID 4952 (D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026\target\classes started by Matheus in D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026)
+2026-04-28T11:25:26.063-03:00  INFO 4952 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : The following 1 profile is active: "test"
+2026-04-28T11:25:27.665-03:00  INFO 4952 --- [projeto1-2026] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-28T11:25:27.666-03:00  INFO 4952 --- [projeto1-2026] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-04-28T11:25:27.740-03:00  INFO 4952 --- [projeto1-2026] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-28T11:25:27.881-03:00  INFO 4952 --- [projeto1-2026] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-28T11:25:28.088-03:00  INFO 4952 --- [projeto1-2026] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-04-28T11:25:28.092-03:00  INFO 4952 --- [projeto1-2026] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-28T11:25:30.464-03:00  INFO 4952 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : Started Project12026App in 5.0 seconds (process running for 5.64)
+2026-04-28T11:25:30.467-03:00  WARN 4952 --- [projeto1-2026] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-28T11:25:30.467-03:00  WARN 4952 --- [projeto1-2026] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-28T11:29:01.649-03:00  INFO 4952 --- [projeto1-2026] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-28T11:31:36.359-03:00  INFO 4952 --- [projeto1-2026] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-28T11:31:36.363-03:00  INFO 4952 --- [projeto1-2026] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-28T11:31:42.704-03:00  INFO 10040 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : Starting Project12026App using Java 25.0.2 with PID 10040 (D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026\target\classes started by Matheus in D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026)
+2026-04-28T11:31:42.706-03:00  INFO 10040 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : The following 1 profile is active: "test"
+2026-04-28T11:31:44.353-03:00  INFO 10040 --- [projeto1-2026] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-28T11:31:44.354-03:00  INFO 10040 --- [projeto1-2026] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-04-28T11:31:44.431-03:00  INFO 10040 --- [projeto1-2026] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-28T11:31:44.579-03:00  INFO 10040 --- [projeto1-2026] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-28T11:31:44.765-03:00  INFO 10040 --- [projeto1-2026] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-04-28T11:31:44.767-03:00  INFO 10040 --- [projeto1-2026] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-28T11:31:47.172-03:00  INFO 10040 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : Started Project12026App in 5.064 seconds (process running for 5.67)
+2026-04-28T11:31:47.174-03:00  WARN 10040 --- [projeto1-2026] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-28T11:31:47.174-03:00  WARN 10040 --- [projeto1-2026] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-28T11:31:56.291-03:00  INFO 10040 --- [projeto1-2026] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-28T11:31:56.708-03:00  WARN 10040 --- [projeto1-2026] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Void> br.ifmg.projeto1_2026.resources.EmailResource.sendEmail(br.ifmg.projeto1_2026.dto.EmailDTO): [Field error in object 'emailDTO' on field 'Body': rejected value [null]; codes [NotBlank.emailDTO.Body,NotBlank.Body,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [emailDTO.Body,Body]; arguments []; default message [Body]]; default message [não deve estar em branco]] ]
+2026-04-28T11:35:49.046-03:00  INFO 11636 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : Starting Project12026App using Java 25.0.2 with PID 11636 (D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026\target\classes started by Matheus in D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026)
+2026-04-28T11:35:49.049-03:00  INFO 11636 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : The following 1 profile is active: "test"
+2026-04-28T11:35:50.720-03:00  INFO 11636 --- [projeto1-2026] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-28T11:35:50.720-03:00  INFO 11636 --- [projeto1-2026] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-04-28T11:35:50.810-03:00  INFO 11636 --- [projeto1-2026] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-28T11:35:50.942-03:00  INFO 11636 --- [projeto1-2026] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-28T11:35:51.194-03:00  INFO 11636 --- [projeto1-2026] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-04-28T11:35:51.196-03:00  INFO 11636 --- [projeto1-2026] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-28T11:35:53.655-03:00  INFO 11636 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : Started Project12026App in 5.277 seconds (process running for 5.987)
+2026-04-28T11:35:53.658-03:00  WARN 11636 --- [projeto1-2026] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-28T11:35:53.659-03:00  WARN 11636 --- [projeto1-2026] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-28T11:36:01.250-03:00  INFO 11636 --- [projeto1-2026] [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-28T11:36:22.590-03:00 ERROR 11636 --- [projeto1-2026] [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.mail.MailSendException: Mail server connection failed. Failed messages: org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: smtp.google.com, 587; timeout -1;
+  nested exception is:
+	java.net.ConnectException: Connection timed out: connect; message exceptions (1) are:
+Failed message 1: org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: smtp.google.com, 587; timeout -1;
+  nested exception is:
+	java.net.ConnectException: Connection timed out: connect] with root cause
+
+java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:546) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:535) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:659) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:597) ~[na:na]
+	at org.eclipse.angus.mail.util.SocketFetcher.createSocket(SocketFetcher.java:368) ~[jakarta.mail-2.0.5.jar:na]
+	at org.eclipse.angus.mail.util.SocketFetcher.getSocket(SocketFetcher.java:243) ~[jakarta.mail-2.0.5.jar:na]
+	at org.eclipse.angus.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2193) ~[jakarta.mail-2.0.5.jar:na]
+	at org.eclipse.angus.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:729) ~[jakarta.mail-2.0.5.jar:na]
+	at jakarta.mail.Service.connect(Service.java:345) ~[jakarta.mail-2.0.5.jar:na]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:480) ~[spring-context-support-6.2.16.jar:6.2.16]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:399) ~[spring-context-support-6.2.16.jar:6.2.16]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:317) ~[spring-context-support-6.2.16.jar:6.2.16]
+	at org.springframework.mail.MailSender.send(MailSender.java:42) ~[spring-context-support-6.2.16.jar:6.2.16]
+	at br.ifmg.projeto1_2026.service.EmailService.sendMail(EmailService.java:29) ~[classes/:na]
+	at br.ifmg.projeto1_2026.resources.EmailResource.sendEmail(EmailResource.java:22) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.16.jar:6.2.16]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.16.jar:6.2.16]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.16.jar:6.2.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.16.jar:6.2.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.16.jar:6.2.16]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.16.jar:6.2.16]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.16.jar:6.2.16]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.16.jar:6.2.16]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.16.jar:6.2.16]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.16.jar:6.2.16]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.52.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.16.jar:6.2.16]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.52.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.52.jar:10.1.52]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.16.jar:6.2.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.16.jar:6.2.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.16.jar:6.2.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.16.jar:6.2.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.16.jar:6.2.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.16.jar:6.2.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1775) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.52.jar:10.1.52]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+
+2026-04-28T11:37:58.097-03:00  INFO 11636 --- [projeto1-2026] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-28T11:37:58.099-03:00  INFO 11636 --- [projeto1-2026] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-28T11:38:04.786-03:00  INFO 5784 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : Starting Project12026App using Java 25.0.2 with PID 5784 (D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026\target\classes started by Matheus in D:\IFMG - CC\PERIODO VII\Desenvolvimento Back-End\Aula 01\produto1-2026)
+2026-04-28T11:38:04.788-03:00  INFO 5784 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : The following 1 profile is active: "test"
+2026-04-28T11:38:06.366-03:00  INFO 5784 --- [projeto1-2026] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-28T11:38:06.366-03:00  INFO 5784 --- [projeto1-2026] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-04-28T11:38:06.447-03:00  INFO 5784 --- [projeto1-2026] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-28T11:38:06.577-03:00  INFO 5784 --- [projeto1-2026] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-28T11:38:06.792-03:00  INFO 5784 --- [projeto1-2026] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-04-28T11:38:06.794-03:00  INFO 5784 --- [projeto1-2026] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-28T11:38:09.195-03:00  INFO 5784 --- [projeto1-2026] [main] br.ifmg.projeto1_2026.Project12026App    : Started Project12026App in 5.017 seconds (process running for 5.642)
+2026-04-28T11:38:09.199-03:00  WARN 5784 --- [projeto1-2026] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-28T11:38:09.199-03:00  WARN 5784 --- [projeto1-2026] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-28T11:38:13.182-03:00  INFO 5784 --- [projeto1-2026] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-28T11:41:08.438-03:00  INFO 5784 --- [projeto1-2026] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-28T11:41:08.440-03:00  INFO 5784 --- [projeto1-2026] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
