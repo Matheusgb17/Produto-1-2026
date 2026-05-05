@@ -1,6 +1,8 @@
 package br.ifmg.projeto1_2026.dto;
 
 import br.ifmg.projeto1_2026.entity.Usuario;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,19 +10,20 @@ import java.util.List;
 public class UsuarioDTO {
 
     private Long id;
+    @NotBlank(message = "Campo obrigatório")
     private String nome;
     private String telefone;
+    @NotBlank(message = "Campo obrigatório")
+    @Email(message = "Email Inválido")
     private String email;
-    private String senha;
 
     private List<PerfilDTO> perfil = new ArrayList<PerfilDTO>();
 
-    public UsuarioDTO(Long id, String nome, String telefone, String email, String senha) {
+    public UsuarioDTO(Long id, String nome, String telefone, String email) {
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
-        this.senha = senha;
     }
 
     public UsuarioDTO(Usuario usuario) {
@@ -28,7 +31,6 @@ public class UsuarioDTO {
         this.nome = usuario.getNome();
         this.telefone = usuario.getTelefone();
         this.email = usuario.getEmail();
-        this.senha = usuario.getSenha();
         usuario.getPerfil().forEach(perf->this.perfil.add(new PerfilDTO(perf)));
     }
 
@@ -64,14 +66,6 @@ public class UsuarioDTO {
         this.email = email;
     }
 
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
-
     public List<PerfilDTO> getPerfil() {
         return perfil;
     }
@@ -87,7 +81,6 @@ public class UsuarioDTO {
                 ", nome='" + nome + '\'' +
                 ", telefone='" + telefone + '\'' +
                 ", email='" + email + '\'' +
-                ", senha='" + senha + '\'' +
                 '}';
     }
 }

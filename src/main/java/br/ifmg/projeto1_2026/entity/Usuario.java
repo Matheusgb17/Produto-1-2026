@@ -25,7 +25,7 @@ public class Usuario {
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant atualizadoEm;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "tb_usuario_perfil",
             joinColumns = @JoinColumn(name = "id_usuario"),
@@ -117,6 +117,14 @@ public class Usuario {
         if (o == null || getClass() != o.getClass()) return false;
         Usuario usuario = (Usuario) o;
         return Objects.equals(id, usuario.id);
+    }
+
+    public void addRole(Perfil perfil){
+        this.perfis.add(perfil);
+    }
+
+    public boolean hasRole(Perfil perfil){
+        return this.perfis.contains(perfil);
     }
 
     @Override

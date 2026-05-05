@@ -1,7 +1,9 @@
 package br.ifmg.projeto1_2026.resources;
 
 import br.ifmg.projeto1_2026.dto.UsuarioDTO;
+import br.ifmg.projeto1_2026.dto.UsuarioInsertDTO;
 import br.ifmg.projeto1_2026.service.UsuarioService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
@@ -33,7 +35,7 @@ public class UsuarioResource {
     }
 
     @PostMapping
-    public ResponseEntity<UsuarioDTO> insert(@RequestBody UsuarioDTO dto){
+    public ResponseEntity<UsuarioDTO> insert(@RequestBody @Valid UsuarioInsertDTO dto){
         UsuarioDTO retorno = usuarioService.insert(dto);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(retorno.getId()).toUri();
         return ResponseEntity.created(location).body(retorno);

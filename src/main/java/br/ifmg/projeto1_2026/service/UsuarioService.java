@@ -2,6 +2,7 @@ package br.ifmg.projeto1_2026.service;
 
 import br.ifmg.projeto1_2026.dto.PerfilDTO;
 import br.ifmg.projeto1_2026.dto.UsuarioDTO;
+import br.ifmg.projeto1_2026.dto.UsuarioInsertDTO;
 import br.ifmg.projeto1_2026.entity.Perfil;
 import br.ifmg.projeto1_2026.entity.Usuario;
 import br.ifmg.projeto1_2026.repository.PerfilRepository;
@@ -13,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.lang.NonNull;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,6 +27,9 @@ public class UsuarioService {
 
     @Autowired
     private PerfilRepository perfilRepository;
+
+    @Autowired
+    private PasswordEncoder encoder;
 
     @Transactional(readOnly = true)
     public Page<UsuarioDTO> findAll(Pageable pageable){
@@ -39,20 +44,12 @@ public class UsuarioService {
     }
 
     @Transactional
-    public UsuarioDTO insert(UsuarioDTO dto){
+    public UsuarioDTO insert(UsuarioInsertDTO dto){
         Usuario entity = new Usuario();
-        entity.setNome(dto.getNome());
-        entity.setTelefone(dto.getTelefone());
-        entity.setEmail(dto.getEmail());
-        entity.setSenha(dto.getSenha());
-
-        entity.getPerfil().clear();
-
-        for(PerfilDTO perfDto: dto.getPerfil()){
-            Perfil perf = perfilRepository.getReferenceById(perfDto.getId());
-            entity.getPerfil().add(perf);
-        }
-
+        copyDtoToEntity(dto, entity);
+        entity.setSenha(
+                encoder.encode(dto.getSenha())
+        );
         Usuario novo = usuarioRepository.save(entity);
         return new UsuarioDTO(novo);
     }
@@ -86,7 +83,6 @@ public class UsuarioService {
         entity.setNome(dto.getNome());
         entity.setTelefone(dto.getTelefone());
         entity.setEmail(dto.getEmail());
-        entity.setSenha(dto.getSenha());
         entity = usuarioRepository.save(entity);
 
         entity.getPerfil().clear();
