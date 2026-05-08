@@ -5,6 +5,7 @@ import br.ifmg.projeto1_2026.dto.UsuarioDTO;
 import br.ifmg.projeto1_2026.dto.UsuarioInsertDTO;
 import br.ifmg.projeto1_2026.entity.Perfil;
 import br.ifmg.projeto1_2026.entity.Usuario;
+import br.ifmg.projeto1_2026.projections.UserDetailsProjections;
 import br.ifmg.projeto1_2026.repository.PerfilRepository;
 import br.ifmg.projeto1_2026.repository.UsuarioRepository;
 import org.springframework.data.domain.Pageable;
@@ -14,14 +15,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.lang.NonNull;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UsuarioService {
+public class UsuarioService implements UserDetailsService {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
@@ -92,6 +98,22 @@ public class UsuarioService {
         }
         return entity;
 
+    }
+
+    // 18 - Avançando com o Spring Security | Oauth
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        List<UserDetailsProjections> dados =
+                usuarioRepository.loadUserBuUsername(username);
+
+        if(dados.isEmpty()){
+            throw new UsernameNotFoundException(username);
+        }
+
+        usuarioRepository.loadUserBuUsername(username);
+        Usuario usuario = new Usuario();
+
+        return null;
     }
 
 }
