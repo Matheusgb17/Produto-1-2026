@@ -1,7 +1,7 @@
 package br.ifmg.projeto1_2026.repository;
 
 import br.ifmg.projeto1_2026.entity.Usuario;
-import br.ifmg.projeto1_2026.projections.UserDetailsProjections;
+import br.ifmg.projeto1_2026.projections.UserDetailsProjection;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -23,5 +23,5 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
                       INNER JOIN tb_perfil p ON p.id = up.id_perfil
                       WHERE u.email = :username
                     """)
-    List<UserDetailsProjections> loadUserBuUsername(String username);
+    List<UserDetailsProjection> loadUserBuUsername(String username);
 }

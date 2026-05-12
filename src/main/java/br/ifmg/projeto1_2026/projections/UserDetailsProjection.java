@@ -1,8 +1,8 @@
 package br.ifmg.projeto1_2026.projections;
 
-public interface UserDetailsProjections {
+public interface UserDetailsProjection {
     String getUsername();
     String getPassword();
-    String getRoleId();
+    Long getRoleId();
     String getAuthority();
 }
