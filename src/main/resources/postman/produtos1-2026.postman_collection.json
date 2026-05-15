@@ -16,13 +16,14 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://{{host}}/categorias",
-              "protocol": "http",
+              "raw": "http:/{{host}}/categoria",
               "host": [
-                "{{host}}"
+                "http"
               ],
+              "port": "",
               "path": [
-                "categorias"
+                "{{host}}",
+                "categoria"
               ]
             }
           },
@@ -34,14 +35,76 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://{{host}}/categorias/5",
+              "raw": "http:/{{host}}/categoria/1",
+              "host": [
+                "http"
+              ],
+              "port": "",
+              "path": [
+                "{{host}}",
+                "categoria",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "post",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "put",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Produto",
+      "item": [
+        {
+          "name": "GetProduto",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "EMAIL",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"to\": \"bmatheusgarcia@gmail.com\",\r\n  \"subject\": \"Teste de envio\",\r\n  \"body\": \"Esse é o conteúdo do email 💌\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://{{host}}/email",
               "protocol": "http",
               "host": [
                 "{{host}}"
               ],
               "path": [
-                "categorias",
-                "5"
+                "email"
               ]
             }
           },
@@ -50,8 +113,17 @@
       ]
     },
     {
-      "name": "Produto",
-      "item": []
+      "name": "Usuário",
+      "item": [
+        {
+          "name": "GetUsuario",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }

@@ -14,14 +14,13 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
     @Query(nativeQuery = true,
             value = """
-                      SELECT  u.email as username,
-                      u.senha as password;                          
-                      p.id as roleId
-                      p.nome as authority
-                      FROM tb_usuario u
-                      INNER JOIN tb_usuario_perfil up ON up.id_usuario = u.id
-                      INNER JOIN tb_perfil p ON p.id = up.id_perfil
-                      WHERE u.email = :username
-                    """)
+                    SELECT u.email AS username,
+                        u.senha AS password,
+                        p.id AS roleId,
+                        p.autoridade AS authority
+                        FROM tb_usuario u
+                        INNER JOIN tb_usuario_perfil up ON up.id_usuario = u.id
+                        INNER JOIN tb_perfil p ON p.id = up.id_perfil
+                        WHERE u.email = :username""")
     List<UserDetailsProjection> loadUserBuUsername(String username);
 }
